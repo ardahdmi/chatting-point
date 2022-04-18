@@ -16,3 +16,11 @@ export class AuthDto {
   firstName?: string;
   lastName?: string;
 }
+
+export class JwtPayloadDto {
+  sub: number;
+
+  @IsEmail()
+  @IsNotEmpty()
+  email: string;
+}
